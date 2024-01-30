@@ -8,6 +8,8 @@ try{
     if(empty($_GET['page'])){
         throw new Exception("La page n'exsite pas");
     } else {
+        $url = explode("/",filter_var($_GET['page'],FILTER_SANITIZE_URL));
+        var_dump($url);
         echo "La page demandé est : ".$_GET['page'];
     } 
 } catch (Exception $e) {
