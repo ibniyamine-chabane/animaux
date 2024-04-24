@@ -3,7 +3,7 @@ abstract class Model {
     private static $pdo;
 
     private static function setBdd(){ 
-        self::$pdo = new PDO("mysql:host=localhost;dbname=dbanimaux;charset=utf8;port=3307","root","");
+        self::$pdo = new PDO("mysql:host=localhost;dbname=bddanimaux;charset=utf8;port=3307","root","");
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING); // these attribut is for management at the connection with PDO
     }
 

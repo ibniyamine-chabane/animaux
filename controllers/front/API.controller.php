@@ -2,7 +2,7 @@
 
 require_once "models/front/API.manager.php";
 class APIcontroller { 
-
+ 
     private $apiManager;
 
     public function __construct() {
@@ -15,8 +15,10 @@ class APIcontroller {
         // echo "Envoi des informations sur les animaux";
     }
 
-    public function getAnimal(int $idAnimal){
-        echo "données JSON de l'animal ".$idAnimal." demandées";
+    public function getAnimal($idAnimal){
+        $lineAnimal = $this->apiManager->getDBAnimal($idAnimal);
+        var_dump($lineAnimal);
+        // echo "données JSON de l'animal ".$idAnimal." demandées";
     }
 
     public function getContinents(){
